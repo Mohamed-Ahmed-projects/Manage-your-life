@@ -1,0 +1,266 @@
+.loginclose {
+    width: 50px;
+    height: 37px;
+    margin-top: -10px;
+    cursor: pointer;
+    font-size: 50px;
+    border: none;
+    color: #000;
+}
+.loginclose:hover i{
+    color: royalblue;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    cursor: pointer;
+}
+.outerFrame {
+    border: 1px solid hsl(0, 0%, 41%);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 50px;
+    background-color: #eee;
+}
+@media (max-width: 767px) {
+    .outerFrame {
+        width: 80%;
+        padding: 10px;
+    }
+}
+center {
+    font-size: 100px;
+    color:hsl(0, 0%, 0);
+    margin-bottom: 10px;
+    & span {
+        cursor: pointer;
+    }
+    & span.active {
+        color: royalblue;
+    }
+    & span.inactive {
+        color: hsl(0, 0%, 41%);
+        opacity: 0.5;
+    }
+}
+@media (max-width: 991px) {
+    center {
+        font-size: 70px;
+        transition: font-size 2s ease-in-out;
+        -webkit-transition: font-size 2s ease-in-out    ;
+        -moz-transition: font-size 2s ease-in-out    ;
+        -ms-transition: font-size 2s ease-in-out    ;
+        -o-transition: font-size 2s ease-in-out    ;
+}
+}
+@media (max-width:767px) {
+    center {
+        font-size: 50px;
+        transition: font-size 2s ease-in-out;
+        -webkit-transition: font-size 2s ease-in-out    ;
+        -moz-transition: font-size 2s ease-in-out    ;
+        -ms-transition: font-size 2s ease-in-out    ;
+        -o-transition: font-size 2s ease-in-out    ;
+}
+}
+@media (max-width: 400px) {
+    center {
+        font-size: 30px;
+        transition: font-size 2s ease-in-out;
+        -webkit-transition: font-size 2s ease-in-out    ;
+        -moz-transition: font-size 2s ease-in-out    ;
+        -ms-transition: font-size 2s ease-in-out    ;
+        -o-transition: font-size 2s ease-in-out    ;
+}
+}
+.outerFrame form {
+    padding: 10px;
+}
+.outerFrame form input, .outerFrame form select{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 35px;
+    width: auto;
+    height: 50px;
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    outline: none;
+    padding-left: 25px;
+    font-size: 25px;
+    border: none;
+}
+@media (max-width: 767px) {
+    .outerFrame form {
+        padding-left: 0;
+    }
+    .outerFrame {
+        padding: 30px;
+    }
+    .outerFrame form input, .outerFrame form select {
+        font-size: 18px;
+    }
+    
+}
+.outerFrame form input:focus, .outerFrame form select:focus{
+    border: 3px solid royalblue;
+}
+.outerFrame form select{
+    margin-bottom: 30px
+}
+.outerFrame form option {
+    margin-top: 10px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.outerFrame form .submit {
+    background-color: initial;
+    border: 1px solid royalblue;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    outline: none;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    padding-left: 0;
+}
+@media (max-width:767px) {
+    .outerFrame form .submit {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+@media (max-width: 400px) {
+    .outerFrame form .submit {
+        font-size: 24px;        
+    }
+}
+.outerFrame form .submit:hover {
+    background-color: rgb(64,104,224)
+}
+.outerFrame form .submit + a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10%;
+    margin-top: -10px;
+}
+.outerFrame label {
+    font-size: 25px;
+}
+.outerFrame form .or {
+    text-align: center;
+    width: fit-content;
+    border: 1px solid rgb(64,104,224);
+    width: 50px;
+    height: 50px;
+    line-height: 20px;;
+    padding-top: calc(15px);
+    border-radius: 25%;
+    margin: 20px auto;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+    cursor:context-menu;
+}
+.outerFrame form .or:hover {
+    background-color: royalblue;
+}
+.outerFrame form .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}.outerFrame form .button span {
+    text-wrap:nowrap;
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px 0 6px 0;
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    .outerFrame form .button span {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1100px) {
+    .outerFrame form .submit {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        font-size: 20px;
+    }
+    .outerFrame form .submit  span{
+        font-size: inherit;
+    }
+}
+
+.outerFrame form {
+    position: relative;
+}
+.outerFrame form .loading {
+    position: absolute;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+    border-style: dotted none none;
+    border-color: royalblue;
+    animation: rotation 2s linear infinite;
+    -webkit-animation: rotation 2s linear infinite;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    top: 308.5px;
+    left: 47.5%;
+}
+@media (max-width: 767px) {
+    .outerFrame form .loading {
+        left:40% !important;
+    }
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+} to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}

@@ -1,0 +1,16 @@
+.outerFrame form div.load{
+    position: relative;
+    display: inline-block;
+    width: auto;
+    width: 100%
+}
+.outerFrame form div .loading {
+    top: -80px !important;
+    left: 47% !important;
+    z-index: 10;
+    @media (max-width: 767px) {
+        & {
+            left: 40% !important;  
+        }
+    }
+}
