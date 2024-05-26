@@ -1,0 +1,76 @@
+nav  i.bell {
+    position: absolute;
+    top: 7px;
+    right: 70px;
+    font-size: 30px;
+    cursor: pointer;
+}
+nav  i:hover {
+    color: royalblue;
+}
+body > .container {
+    margin-top: 50px
+}
+.notification {
+    border: 2px solid royalblue;
+    padding: 20px 30px 20px 20px;
+    color: black;
+    font-size: 20px;
+    position: relative;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-bottom: 25px;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    min-height: 90px;
+    span {
+        color: hsl(0, 0%, 41%);
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .close:hover {
+        color: royalblue;
+    }
+}
+@media (max-width: 767px) {
+    .notification {
+        span {
+            right: 10px;
+            bottom: 10px;
+        }
+        .close {
+            right: 10px;
+            top: 20px;
+        }
+        
+    }
+    .bell {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .notification {
+        span {
+            right: 10px;
+            bottom: 0px;
+        }
+        .close {
+            right: 10px;
+            top: 20px;
+        }
+    }
+}
