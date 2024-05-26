@@ -1,0 +1,409 @@
+.content {
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+    border: 10px solid white;
+    border-width: 20px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: royalblue;
+    box-shadow: 5px 0px 10px #555;
+    z-index: 3;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.sideBar .year {
+    margin: 0 auto;
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+} 
+.year i {
+    cursor: pointer;
+    color: white;
+
+}
+.year span {
+    color: white;
+    padding-top: 4px;
+}
+
+.sideBar .months {
+    padding: 10px;
+}
+.sideBar .months li {
+    padding: 3px;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+.sideBar .months li:hover {
+    background-color: hsla(0, 0%, 41%,0.3);
+}
+.days {
+    display: grid;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 5px 0px 10px #555;
+}
+
+.days caption {
+    font-size: 30px;
+    font-weight: bold;
+    color: royalblue;
+    position: relative;
+    text-transform: uppercase;
+}
+.days caption::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: hsla(0, 0%, 41%,0.6);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.days th {
+    padding-top: 30px;
+    font-size:20px;
+}
+td.active {
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    z-index: 1;
+    cursor: pointer;
+}
+td:hover::after {
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: #eee;
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+    border: 1px solid royalblue
+}
+td.empty:hover::after {
+    display: none;
+}
+td:hover {
+    color: royalblue;
+    font-weight: bold;
+}
+.current {
+    display: flex;
+    padding: 130px 20px 20px;
+    z-index: -1;
+    background-color: hsl(0, 0%, 41%);
+    flex-direction: column;
+    gap: 25px;
+}
+.current .date {
+    font-size: 30px;
+    font-weight: bold;
+    color: royalblue;
+}
+.current .date hr {
+    height: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.current div h3 {
+    color: rgb(22, 192, 161);
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+.current div h3  i {
+    font-size: 15px;
+    /* font-weight: light; */
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+}
+.current div h3  span {
+    vertical-align: middle;
+    padding-top: 4px;
+}
+div.hideToDay {
+    background-color: royalblue;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: white;
+    z-index: 3;
+    box-shadow: -5px 5px 10px #4b4e50;
+}
+div.hideYear {
+    left: 0;
+}
+.event {
+    padding: 20px 20%;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width: 991px) {
+    .event {
+        justify-content: space-between;
+        padding: 20px 5%;
+    }
+}
+@media (max-width: 600px) {
+    .event {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .event button {
+        font-size: 20px !important;
+        width: 100%;
+        padding: 10px !important;
+        text-align: center;
+    }
+    .formContainer {
+        max-width: 90%;
+        padding: 15px !important;
+    }
+    .formContainer form {
+        max-width: 100%;
+    }
+}
+.event button {
+    border: none;
+    background-color: royalblue;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+.add button {
+    padding: 10px 50px; 
+}
+.formContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    padding: 30px;
+    width: fit-content;
+    border: 1px solid royalblue;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formContainer form  input{
+    outline: none;
+    border: none;
+    height: 40px;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.formContainer form  input[type="submit"]{
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.current ul .goal {
+    font-size: 20px;
+    color: white;
+}
+
+.current ul .task {
+    font-size: 20px;
+    color: white;
+}
+.goalHeader, .taskHeader {
+    font-weight: bold; 
+    font-size: 20px;
+}
+.eventItem {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    padding: none;
+}
+@media (max-width: 991px) {
+    @keyframes showBar {
+        0% {
+            width: 0%;
+        }
+        25% {
+            width: 7.5%;
+        }
+        50% {
+            width: 15%;
+        }
+        75% {
+            width: 22.5%;
+        }
+        100% {
+            width: 30%;
+        }
+    }@keyframes hideBar {
+        0% {
+            width: 30%
+        }
+        25% {
+            width: 22.5%;
+        }
+        50% {
+            width: 15%;
+        }
+        75% {
+            width: 7.5%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    .sideBar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        animation: hideBar 0.5s ease-in-out;
+        -webkit-animation: hideBar 0.5s ease-in-out;
+        display: none;
+    }
+
+    .sideBar.clicked {
+        animation: showBar 0.5s ease-in-out;
+        -webkit-animation: showBar 0.5s ease-in-out;
+    }
+    
+    .today {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        animation: hideBar 0.5s ease-in-out;
+        -webkit-animation: hideBar 0.5s ease-in-out;
+        display: none;
+        max-width: 40%;
+        transition: max-width 0.4s linear;
+        -webkit-transition: max-width 0.4s linear;
+        -moz-transition: max-width 0.4s linear;
+        -ms-transition: max-width 0.4s linear;
+        -o-transition: max-width 0.4s linear;
+        overflow-y: scroll;
+        height: 100%
+    }
+    .current.clicked {
+        animation: showBar 0.5s ease-in-out;
+        -webkit-animation: showBar 0.5s ease-in-out;
+    }
+    .content {
+        grid-template-columns: 100%;
+    }
+    .content:not(:has(.clicked)) .days {
+        opacity: 1.0;
+        transition: opacity 0.5s linear;
+        -webkit-transition: opacity 0.5s linear;
+        -moz-transition: opacity 0.5s linear;
+        -ms-transition: opacity 0.5s linear;
+        -o-transition: opacity 0.5s linear;
+}
+    .content:has(.clicked) .days{
+        opacity: 0.5;
+        transition:opacity 0.5s linear;
+        -webkit-transition:opacity 0.5s linear;
+        -moz-transition:opacity 0.5s linear;
+        -ms-transition:opacity 0.5s linear;
+        -o-transition:opacity 0.5s linear;
+    }
+}
+@media (max-width: 600px) {
+    .content .days {
+        padding: 20px;
+        min-height: 600px;
+    }
+    .content .days th {
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    .content .days td {
+        font-size: 20px
+    }
+    .content .today {
+        max-width: 60%;
+}
+}
+@media (max-width: 441px) {
+    .content .days {
+        padding: 10px 0;
+    }
+    .content .today {
+        max-width: 70%;
+    }
+}
+@media (max-width: 398px) {
+    .content .today {
+        max-width: 85%;
+    }
+    .content .today h3 span{
+        font-size:20px;
+    }
+}
